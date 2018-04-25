@@ -172,5 +172,8 @@ class Read_midi(object):
 if __name__ == '__main__':
     filepath = "/Users/leo/Recherche/GitHub_Aciditeam/database/Orchestration/LOP_database_06_09_17/bouliane/0/Brahms_Symph4_iv(1-33)_ORCH+REDUC+piano_orch.mid"
     aaa = Read_midi(filepath, 4).read_file()
+    import utils
+    bbb = utils.dict_to_matrix(aaa)
+    import pdb; pdb.set_trace()
     import write_midi
     write_midi.write_midi(aaa, 4, "test.mid", 80)
